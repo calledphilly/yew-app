@@ -5,14 +5,14 @@ pub struct Props {
     #[prop_or_default]
     pub children: Html,
     #[prop_or_default]
-    pub class: String,
+    pub class: Classes,
 }
 
 #[function_component]
 pub fn Container(props: &Props) -> Html {
     let Props { children, class } = props;
     html! {
-      <div  class={format!("{} w-full", class)}>
+      <div class={classes!("w-full", class.clone())}>
         <div class="max-w-6xl m-auto">
           {children.clone()}
         </div>
