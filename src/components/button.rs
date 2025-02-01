@@ -6,7 +6,7 @@ pub struct ButtonProps {
     pub children: Html,
     #[prop_or_default]
     pub onclick: Callback<MouseEvent>,
-    #[prop_or_default("red")]
+    #[prop_or_default]
     pub color: String,
 }
 
