@@ -18,6 +18,6 @@ pub fn Button(props: &ButtonProps) -> Html {
         color,
     } = props;
     html! {
-        <button class={format!("bg-{}-500 hover:bg-{}-400 duration-400 text-xl w-fit px-10 py-3 rounded-xl", color, color)} onclick={onclick}>{children.clone()}</button>
+        <button class={format!("bg-{}-500 hover:bg-{}-400 duration-400 text-xl w-fit px-10 py-3 rounded-xl", color, color)} {onclick}>{children.clone()}</button>
     }
 }
